@@ -1,0 +1,10 @@
+<input [(ngModel)]="searchText" class="form-control" placeholder="Búscar por nombre del cómic" />
+
+<div class="card-deck" *ngIf="!loading">
+    <div *ngFor="let comic of comics | filtroBusqueda: { title: searchText }" class="col-lg-3 col-md-4 col-xs-12 mt-5">
+        <app-comic-card [comic]='comic'></app-comic-card>
+    </div>
+</div>
+
+<app-loading-comic-card *ngIf="loading"></app-loading-comic-card>
+<app-loading-comic-card *ngIf="loading"></app-loading-comic-card>

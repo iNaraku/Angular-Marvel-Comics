@@ -1,0 +1,5 @@
+<a [routerLink]="['../comic-info', comic.id]">
+    <img [src]="imagen | imagen" class="card-img-top mr-auto ml-auto" alt="portada comic" height="355">
+</a>
+<h6 class="titulo">{{ comic.title }}</h6>
+<p class="titulo"><a *ngFor="let creador of comic.creators.items">{{ creador.name }}, </a></p>

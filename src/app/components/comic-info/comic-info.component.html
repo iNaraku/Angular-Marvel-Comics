@@ -1,0 +1,38 @@
+<div *ngIf="!loading">
+    <a class="btn btn-danger" [routerLink]="['../../home']" role="button">Regresar</a>
+
+    <div class="row mt-5">
+        <div class="col-md-4 col-ks-12">
+            <img [src]="imagen | imagen" class="card-img-top mr-auto ml-auto" alt="portada comic" height="500">
+        </div>
+
+        <div class="col-md-8 col-xs-12">
+            <h3>{{ comic.title }}</h3>
+            <br>
+
+            <h5>Fecha de publicación:</h5>
+            <p>{{ fechaPublicacion | date }}</p>
+            <br>
+
+            <h5>Escritor(es):</h5>
+            <p><a *ngFor="let escritor of escritores">{{ escritor.name }}, </a></p>
+            <br>
+
+            <h5>Coloreador(es):</h5>
+            <p><a *ngFor="let coloreador of coloreadores">{{ coloreador.name }}, </a></p>
+            <br>
+
+            <h5>Personaje(s):</h5>
+            <p><a *ngFor="let personaje of personajes.items">{{ personaje.name }}, </a></p>
+            <br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-justify mt-5">{{ comic.description }}</p>
+        </div>
+    </div>
+</div>
+
+<app-loading-comic-info *ngIf="loading"></app-loading-comic-info>
