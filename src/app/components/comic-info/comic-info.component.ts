@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Result, Comic, Characters } from 'src/app/models/comic.model';
+import { Comic } from 'src/app/models/comic.model';
+import { Result } from 'src/app/models/result.model';
+import { Characters } from 'src/app/models/characters.model';
+import { Item } from 'src/app/models/item.model';
 import { MarvelService } from 'src/app/services/marvel.service';
 import { ActivatedRoute } from '@angular/router';
-import { Item } from '../../models/comic.model';
 
 @Component({
   selector: 'app-comic-info',
@@ -27,6 +29,10 @@ export class ComicInfoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Llena la informacion del cómic solicitado
+   * @param idComic Identificador único del cómic solictado
+   */
   getComicById = (idComic: number) => {
     this.marvelService.getComicById(idComic).subscribe((comic: Comic) => {
       this.comic = comic.data.results[0];

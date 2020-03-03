@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Result } from 'src/app/models/comic.model';
+import { Result } from 'src/app/models/result.model';
 
 @Component({
   selector: 'app-comic-card',

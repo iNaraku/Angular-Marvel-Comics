@@ -1,0 +1,40 @@
+import { Price } from './price.model';
+import { Creators } from './creators.model';
+import { Characters } from './characters.model';
+import { Url } from './url.model';
+import { Series } from './series.model';
+import { Thumbnail } from './thumbnail.model';
+import { Stories } from './stories.model';
+import { DateModel } from './date.model';
+
+export interface Result {
+  id: number;
+  digitalId: number;
+  title: string;
+  issueNumber: number;
+  variantDescription: string;
+  description?: any;
+  modified: string;
+  isbn: string;
+  upc: string;
+  diamondCode: string;
+  ean: string;
+  issn: string;
+  format: string;
+  pageCount: number;
+  textObjects: any[];
+  resourceURI: string;
+  urls: Url[];
+  series: Series;
+  variants: Series[];
+  collections: any[];
+  collectedIssues: any[];
+  dates: DateModel[];
+  prices: Price[];
+  thumbnail: Thumbnail;
+  images: any[];
+  creators: Creators;
+  characters: Characters;
+  stories: Stories;
+  events: Characters;
+}

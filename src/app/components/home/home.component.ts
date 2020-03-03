@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MarvelService } from '../../services/marvel.service';
-import { Comic, Result } from '../../models/comic.model';
+import { Comic } from '../../models/comic.model';
+import { Result } from '../../models/result.model';
 
 @Component({
   selector: 'app-home',
@@ -19,9 +20,12 @@ export class HomeComponent implements OnInit {
     this.getComics();
   }
 
+  /**
+   * Obtiene listas de cómics
+   */
   getComics = () => {
     this.marvelService.getComics().subscribe((comics: Comic) => {
-      console.log(comics);
+      // console.log(comics);
       this.comics = comics.data.results;
       this.loading = false;
     });

@@ -15,10 +15,17 @@ export class MarvelService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+   * Obtiene listas de cmics
+   */
   getComics = () => {
     return this.http.get<Comic>(`${ this.url }?apikey=${ this.apiKey }&hash=${ this.hash }&ts=${ this.ts }&limit=100`);
   }
 
+  /**
+   * Obtiene un solo comic por id
+   * @param idComic Identificador único del cómic
+   */
   getComicById = (idComic: number) => {
     return this.http.get<Comic>(`${ this.url }/${ idComic }?apikey=${ this.apiKey }&hash=${ this.hash }&ts=${ this.ts }`);
   }
