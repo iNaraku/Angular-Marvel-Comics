@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "ComicsApp": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ComicsApp"
+    }
+  },
+  "defaultProject": "ComicsApp",
+  "cli": {
+    "analytics": "59d66273-cd1f-4bba-952d-db4c54e496f3"
+  }
 }

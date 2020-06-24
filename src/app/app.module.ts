@@ -12,6 +12,8 @@ import { ComicInfoComponent } from './components/comic-info/comic-info.component
 import { LoadingComicCardComponent } from './components/templates/loading-comic-card/loading-comic-card.component';
 import { LoadingComicInfoComponent } from './components/templates/loading-comic-info/loading-comic-info.component';
 import { FiltroBusquedaPipe } from './pipes/filtro-busqueda.pipe';
+import { BranchOfficeComponent } from './components/branch-office/branch-office.component';
+import { AddComicComponent } from './components/add-comic/add-comic.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FiltroBusquedaPipe } from './pipes/filtro-busqueda.pipe';
     ComicInfoComponent,
     LoadingComicCardComponent,
     LoadingComicInfoComponent,
-    FiltroBusquedaPipe
+    FiltroBusquedaPipe,
+    BranchOfficeComponent,
+    AddComicComponent
   ],
   imports: [
     BrowserModule,
